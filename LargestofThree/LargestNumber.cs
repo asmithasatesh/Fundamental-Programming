@@ -1,11 +1,12 @@
 ﻿using System;
 
 
+
 namespace LargestNumber
 {
-    class LargestofThree
+    public static class LargestofThree
     {
-        static void Main(string[] args)
+        public static void ReadInput()
         {
             //local Variables
             int num1, num2, num3;
@@ -17,13 +18,18 @@ namespace LargestNumber
             num2 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter number 3\n");
             num3 = Convert.ToInt32(Console.ReadLine());
+            CompareThree(num1, num2, num3);
+        }
+
+        private static void CompareThree(int num1,int num2,int num3)
+        {
             //Compare 1 and 2
             if (num1 > num2)
             {
                 //Compare 1 and 3
                 if (num1 > num3)
                 {
-                    Console.Write("Number"+num1+"is the largest!\n");
+                    Console.Write("Number" + num1 + "is the largest!\n");
                 }
                 else
                 {
@@ -31,9 +37,12 @@ namespace LargestNumber
                 }
             }//Compare 2 and 3
             else if (num2 > num3)
+            {
                 Console.Write("Number " + num2 + " is the largest!\n");
+            }
             else
                 Console.Write("Number " + num3 + " is the largest!\n");
         }
+        
     }
 }

@@ -7,28 +7,34 @@ namespace VowelsorConstant
     public static class Extensions
     {
         //Contains is a method in 
-        public static bool find<T>(this List<T> vowel, T i)
+        public static bool Find<T>(this List<T> vowel, T i)
         {
             //return either true or false
             return vowel.Contains(i);
         }
     }
-    class VowelsorConstant
+    public class VowelsorConstant
     {
-        static void Main(string[] args)
+
+        public static void ReadInput()
         {
             //List containing all vowels
-            List<string> vowel = new List<string> {"A","E","I","O","U","a","e","i","o","u"};
+            List<string> vowel = new List<string> { "A", "E", "I", "O", "U", "a", "e", "i", "o", "u" };
             //Input string from user
             Console.WriteLine("Enter a string \n");
-            string input =Console.ReadLine();
+            string input = Console.ReadLine();
             //check each character in string 
-            foreach(char i in input)
+            VowelsOrConsonant(input,vowel);
+        }
+
+        private static void VowelsOrConsonant(string input,List<string> vowel)
+        {
+            foreach (char i in input)
             {
-                bool isExist = vowel.find(Convert.ToString(i));
-                if (isExist==true)
+                bool isExist = vowel.Find(Convert.ToString(i));
+                if (isExist == true)
                 {
-                    Console.WriteLine(i+" ->Vowel");
+                    Console.WriteLine(i + " ->Vowel");
                 }
                 else
                 {
@@ -37,7 +43,8 @@ namespace VowelsorConstant
                 }
 
             }
+        }
             
         }
     }
-}
+

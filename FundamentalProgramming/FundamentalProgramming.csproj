@@ -5,4 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Factors\Factors.csproj" />
+    <ProjectReference Include="..\LargestofThree\LargestofThree.csproj" />
+    <ProjectReference Include="..\Leap Year\Leap Year.csproj" />
+    <ProjectReference Include="..\VowelsorConstant\VowelsorConstant.csproj" />
+  </ItemGroup>
+
 </Project>
